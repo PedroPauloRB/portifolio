@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pedro Paulo | Desenvolvedor Backend Java</title>
+<meta name="description" content="Portfólio de Pedro Paulo Ramos de Barros, desenvolvedor backend Java e Spring Boot. / Portfolio of Pedro Paulo Ramos de Barros, Java and Spring Boot backend developer.">
+<meta name="color-scheme" content="dark light">
+<script>
+  document.documentElement.classList.add('js');
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#about" data-i18n="skip_link"></a>
+<div id="flash" aria-hidden="true"></div>
+
+<header class="bar">
+  <a class="brand" href="#top">&gt; pedro.dev<span class="blink">_</span></a>
+  <nav class="nav" aria-label="Principal / Main">
+    <a href="#about" data-i18n="nav_about"></a>
+    <a href="#projects" data-i18n="nav_projects"></a>
+    <a href="#skills" data-i18n="nav_skills"></a>
+    <a href="#contact" data-i18n="nav_contact"></a>
+  </nav>
+  <div class="tools">
+    <a class="btn btn-sm" data-link="cv" data-i18n="cv"></a>
+    <button class="btn btn-sm" id="lang-btn" type="button"></button>
+    <button class="btn btn-sm" id="theme-btn" type="button">&#9680;</button>
+  </div>
+</header>
+
+<noscript>
+  <p class="sec">Este site precisa de JavaScript. / This site needs JavaScript.</p>
+</noscript>
+
+<main id="top">
+  <section class="hero" id="hero">
+    <div class="term">
+      <div class="term-bar">
+        <span>pedro@dev:~$</span>
+        <button id="skip-btn" class="link-btn" type="button" data-i18n="skip"></button>
+      </div>
+      <pre id="boot-out" class="boot" aria-live="off"></pre>
+      <div id="hero-main" class="hero-main">
+        <h1 class="name">Pedro Paulo Ramos de Barros</h1>
+        <p class="tagline" data-i18n="hero_sub"></p>
+        <div class="cta">
+          <a class="btn" id="start-btn" href="#about" data-i18n="start"></a>
+          <a class="btn btn-ghost" data-link="github">GitHub</a>
+          <a class="btn btn-ghost" data-link="linkedin">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="about">
+    <h2 class="sec-title reveal"><span>01</span><span data-i18n="about_title"></span></h2>
+    <div class="sheet reveal">
+      <div class="photo-wrap">
+        <canvas id="photo" width="48" height="48" hidden></canvas>
+        <div id="photo-ph" class="ph" aria-hidden="true">PP</div>
+      </div>
+      <div class="sheet-body">
+        <dl class="stats">
+          <div><dt data-i18n="about_class_l"></dt><dd data-i18n="about_class"></dd></div>
+          <div><dt data-i18n="about_level_l"></dt><dd data-i18n="about_level"></dd></div>
+          <div><dt data-i18n="about_loc_l"></dt><dd>Recife, PE</dd></div>
+        </dl>
+        <p data-i18n="about_text"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="projects">
+    <h2 class="sec-title reveal"><span>02</span><span data-i18n="projects_title"></span></h2>
+    <div class="cards">
+
+      <article class="card reveal" style="--i:0">
+        <header class="card-head">
+          <span class="phase"><span data-i18n="phase"></span> 1</span>
+          <span class="badge" data-i18n="status_progress"></span>
+        </header>
+        <h3>auth-service + task-service</h3>
+        <p data-i18n="p1_problem"></p>
+        <h4 data-i18n="decisions"></h4>
+        <ul class="bullets">
+          <li data-i18n="p1_d1"></li>
+          <li data-i18n="p1_d2"></li>
+          <li data-i18n="p1_d3"></li>
+        </ul>
+        <ul class="stack">
+          <li>Java 17</li><li>Spring Boot</li><li>Spring Security</li><li>JWT</li><li>JPA/Hibernate</li><li>H2 &rarr; PostgreSQL</li>
+        </ul>
+        <div class="links">
+          <a class="btn btn-sm" data-link="repo_auth">auth-service</a>
+          <a class="btn btn-sm" data-link="repo_task">task-service</a>
+        </div>
+      </article>
+
+      <article class="card reveal" style="--i:1">
+        <header class="card-head">
+          <span class="phase"><span data-i18n="phase"></span> 2</span>
+          <span class="badge" data-i18n="status_planned"></span>
+        </header>
+        <h3>wallet-service</h3>
+        <p data-i18n="p2_problem"></p>
+        <h4 data-i18n="decisions"></h4>
+        <ul class="bullets">
+          <li data-i18n="p2_d1"></li>
+          <li data-i18n="p2_d2"></li>
+          <li data-i18n="p2_d3"></li>
+        </ul>
+        <ul class="stack">
+          <li>Java</li><li>Spring Boot</li><li>PostgreSQL</li><li>Flyway</li><li>Testcontainers</li>
+        </ul>
+      </article>
+
+      <article class="card locked reveal" style="--i:2">
+        <header class="card-head">
+          <span class="phase"><span data-i18n="phase"></span> 3</span>
+          <span class="badge" data-i18n="status_locked"></span>
+        </header>
+        <h3>??? ???</h3>
+        <p data-i18n="p3_text"></p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="sec" id="skills">
+    <h2 class="sec-title reveal"><span>03</span><span data-i18n="skills_title"></span></h2>
+    <div class="skills-grid">
+      <div class="skills-col reveal" style="--i:0">
+        <h3 data-i18n="skills_mastered"></h3>
+        <ul class="skill-list" id="skills-mastered"></ul>
+      </div>
+      <div class="skills-col reveal" style="--i:1">
+        <h3 data-i18n="skills_learning"></h3>
+        <ul class="skill-list" id="skills-learning"></ul>
+      </div>
+    </div>
+    <p class="note reveal" data-i18n="skills_note"></p>
+  </section>
+
+  <section class="sec" id="contact">
+    <h2 class="sec-title reveal"><span>04</span><span data-i18n="contact_title"></span></h2>
+    <div class="contact-body reveal">
+      <p data-i18n="contact_text"></p>
+      <ul class="menu">
+        <li><a data-link="email">E-mail</a></li>
+        <li><a data-link="linkedin">LinkedIn</a></li>
+        <li><a data-link="github">GitHub</a></li>
+        <li><a data-link="cv">Curriculo</a></li>
+        <li><a data-link="whatsapp">WhatsApp</a></li> 
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>&copy; 2026 Pedro Paulo Ramos de Barros</span>
+  <span data-i18n="footer"></span>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
